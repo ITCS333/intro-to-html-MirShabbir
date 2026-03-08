@@ -32,7 +32,7 @@ if (!fs.existsSync(htmlPath)) {
   describe('HTML Structure and Content Validation', () => {
     
     // Test for <head> elements
-    describe('Document Head <head>', () => {
+    describe('Document Head', () => {
       test('should have a lang attribute on the <html> tag', () => {
         const lang = document.documentElement.getAttribute('lang');
         expect(lang).not.toBeNull();
@@ -55,7 +55,7 @@ if (!fs.existsSync(htmlPath)) {
     });
 
     // Test for <body> elements
-    describe('Document Body <body>', () => {
+    describe('Document Body', () => {
       test('should contain exactly one <h1> heading with text content', () => {
         const h1s = document.querySelectorAll('h1');
         expect(h1s.length).toBe(1);
